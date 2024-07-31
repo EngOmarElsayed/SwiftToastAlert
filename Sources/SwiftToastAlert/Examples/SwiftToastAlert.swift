@@ -28,10 +28,16 @@ struct SwiftUIView: View {
         flag.toggle()
       }.foregroundStyle(.black)
     }
-      .customInteractiveToastAlert(isPresented: $flag, position: .topTrailing, background: .black) {
+//    .toastAlert(
+//      isPresented: $flag,
+//      position: .top,
+//      background: .black) {
+//        AlertIconAppearance(image: Image(systemName: "checkmark"), color: .green, font: .system(size: 16, weight: .bold))
+//      }
+      .interactiveToastAlert(isPresented: $flag, position: .topTrailing, background: .black) {
         AlertTextAppearance(text: "Replace `var` with `let`", color: .white, font: .system(size: 16, weight: .bold))
       } alertIconAppearance: {
-        AlertIconAppearance(image: Image(systemName: "checkmark"), color: .green, size: 16)
+        AlertIconAppearance(image: Image(systemName: "checkmark"), color: .green, font: .system(size: 16, weight: .bold))
       }
   }
 }

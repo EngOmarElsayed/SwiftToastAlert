@@ -26,4 +26,9 @@ internal extension View {
     .animation(.easeInOut(duration: 0.45), value: isPresented)
     .animation(.easeInOut(duration: 0.45), value: isTapped)
   }
+  
+  func alertAnimation(isPresented: Bool) -> some View {
+    self
+    .animation(.easeInOut(duration: 0.45), value: isPresented)
+  }
 }

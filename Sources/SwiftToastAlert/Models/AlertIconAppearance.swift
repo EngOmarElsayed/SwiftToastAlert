@@ -10,11 +10,11 @@ import SwiftUI
 public struct AlertIconAppearance {
   public let image: Image
   public let color: Color?
-  public let size: CGFloat?
+  public let font: Font?
   
-  public init(image: Image, color: Color?, size: CGFloat?) {
+  public init(image: Image, color: Color?, font: Font? = nil) {
     self.image = image
     self.color = color
-    self.size = size
+    self.font = font
   }
 }

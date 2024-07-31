@@ -13,7 +13,7 @@ struct AlertIconView: View {
   
   var body: some View {
     alertIconAppearance.image
-      .font(.system(size: alertIconAppearance.size ?? 16))
+      .font(alertIconAppearance.font)
       .foregroundStyle(alertIconAppearance.color ?? .clear)
   }
 }
