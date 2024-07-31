@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct ToastAlert<S>: ViewModifier where S : ShapeStyle {
+internal struct ToastAlert<S>: ViewModifier where S : ShapeStyle {
   private let disappearingYPosition: CGFloat = -200
   private let deviceWidth = UIScreen.main.bounds.size.width
   
@@ -16,7 +16,7 @@ public struct ToastAlert<S>: ViewModifier where S : ShapeStyle {
   private let background: S
   private let alertIconAppearance: AlertIconAppearance
   
-  public init(isPresented: Binding<Bool>, position: Alignment, background: S, alertIconAppearance: AlertIconAppearance) {
+  internal init(isPresented: Binding<Bool>, position: Alignment, background: S, alertIconAppearance: AlertIconAppearance) {
     _isPresented = isPresented
     self.position = position
     self.background = background
@@ -46,6 +46,17 @@ public struct ToastAlert<S>: ViewModifier where S : ShapeStyle {
 }
 
 public extension View {
+  /// `toastAlert` will display alert toast that doesn't have tap feature.
+  ///
+  ///
+  ///
+  /// - Parameters:
+  ///   - isPresented: A flag that tells when to appear and disappear the toast.
+  ///   - position: The position of the alert toast.
+  ///   - background: Represent the background view of the toast. Takes what ever the ``foregroundStyle``
+  ///   - alertIconAppearance: Represent the icon that will be displayed in the alert.
+  ///
+  /// - Returns: The alert toast view on top of the view it is applied to.
   func toastAlert<S>(
     isPresented: Binding<Bool>,
     position: AlertPosition,
