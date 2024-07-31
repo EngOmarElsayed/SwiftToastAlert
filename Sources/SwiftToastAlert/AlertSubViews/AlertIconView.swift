@@ -9,12 +9,11 @@ import SwiftUI
 
 struct AlertIconView: View {
   @Binding var tapped: Bool
-  let image: Image
-  let color: Color
+  let alertIconAppearance: AlertIconAppearance
   
   var body: some View {
-    image
-      .font(.system(size: 20, weight: .bold))
-      .foregroundStyle(color)
+    alertIconAppearance.image
+      .font(.system(size: alertIconAppearance.size ?? 16))
+      .foregroundStyle(alertIconAppearance.color ?? .clear)
   }
 }
