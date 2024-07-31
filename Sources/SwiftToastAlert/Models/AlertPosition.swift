@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This enum represent the possible position options for the toast alert.
 public enum AlertPosition {
   case topLeading
   case top
