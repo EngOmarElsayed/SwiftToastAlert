@@ -20,6 +20,8 @@ struct AlertDisplayView: View {
         
         if isTapped {
           AlertTextView(alertTextAppearance: alertTextAppearance)
+            .opacity(isTapped ? 1.0: 0.0)
+            .animation(.smooth, value: isTapped)
         }
       }
     }

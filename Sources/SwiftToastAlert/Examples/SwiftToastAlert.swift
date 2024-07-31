@@ -22,14 +22,20 @@ struct SwiftUIView: View {
   }
   
   var body: some View {
-    Button("Hello, World 🌍") {
-      flag.toggle()
-    }.foregroundStyle(.black)
-      .customToastAlert(isPresented: $flag, position: .top, background: .black) {
-        AlertTextAppearance(text: "Replace `var` with `let`, variable doesn't change", color: .white, font: .system(size: 16, weight: .bold))
+    ZStack {
+      Color.red.ignoresSafeArea()
+      Button("Hello, World 🌍") {
+        flag.toggle()
+      }.foregroundStyle(.black)
+    }
+      .customInteractiveToastAlert(isPresented: $flag, position: .topTrailing, background: .black) {
+        AlertTextAppearance(text: "Replace `var` with `let`", color: .white, font: .system(size: 16, weight: .bold))
       } alertIconAppearance: {
-        AlertIconAppearance(image: Image(systemName: "exclamationmark.triangle.fill"), color: .yellow, size: 16)
+        AlertIconAppearance(image: Image(systemName: "checkmark"), color: .green, size: 16)
       }
-    
   }
+}
+
+#Preview {
+  SwiftUIView()
 }

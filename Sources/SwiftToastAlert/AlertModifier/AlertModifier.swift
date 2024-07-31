@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct AlertModifier<S>: ViewModifier where S : ShapeStyle {
+public struct CustomInteractiveToastAlert<S>: ViewModifier where S : ShapeStyle {
   @State private var isTapped: Bool = false
   private let disappearingYPosition: CGFloat = -200
   private let deviceWidth = UIScreen.main.bounds.size.width
@@ -64,17 +64,17 @@ public struct AlertModifier<S>: ViewModifier where S : ShapeStyle {
 }
 
 public extension View {
-  func customToastAlert<S>(
+  func customInteractiveToastAlert<S>(
     isPresented: Binding<Bool>,
-    position: Alignment,
+    position: AlertPosition,
     background: S,
     alertTextAppearance: () -> AlertTextAppearance,
     alertIconAppearance: () -> AlertIconAppearance
   ) -> some View where S: ShapeStyle {
     self.modifier(
-      AlertModifier(
+      CustomInteractiveToastAlert(
         isPresented: isPresented,
-        position: position,
+        position: position.alignment,
         background: background,
         alertTextAppearance: alertTextAppearance(),
         alertIconAppearance: alertIconAppearance()
