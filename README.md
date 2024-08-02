@@ -21,7 +21,7 @@ This is a preview of the first api `interactiveToastAlert`:
 
 https://github.com/user-attachments/assets/42442024-33e0-4fab-87c6-6ff453f79ca7
 
-The second api preview:
+The second api `toastAlert` preview:
 
 https://github.com/user-attachments/assets/0cb3ec3f-aa10-4a5f-b3b2-76773443900a
 
@@ -72,14 +72,14 @@ Output:
 
 https://github.com/user-attachments/assets/0cb3ec3f-aa10-4a5f-b3b2-76773443900a
 
-> [!Waring]  
+> [!Warning]  
 > Don't change the `isPresented` parameter to false after making it true,
 > the api changes the value by it's self and making this change by your self
 > may lead to unexpected behaviour.
 
 ### interactiveToastAlert <a name="sub-topic-1.2"></a>
-This api takes the same parameters as the `toastAlert` but with one more extra parameter which is `alertIconAppearance`,
-`alertIconAppearance` is a closure that return `AlertTextAppearance` instance that contains the displaied text and it's
+This api takes the same parameters as the `toastAlert` but with one more extra parameter which is `alertTextAppearance`,
+`alertTextAppearance` is a closure that return `AlertTextAppearance` instance that contains the displaied text and it's
 apperance. For example:
 
 ```swift
