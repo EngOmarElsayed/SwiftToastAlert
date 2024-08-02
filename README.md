@@ -1,6 +1,8 @@
 # SwiftToastAlert
 ![GitHub License](https://img.shields.io/github/license/EngOmarElsayed/SwiftToastAlert)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](#swift-package-manager)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FEngOmarElsayed%2FSwiftToastAlert%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/EngOmarElsayed/SwiftToastAlert)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FEngOmarElsayed%2FSwiftToastAlert%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/EngOmarElsayed/SwiftToastAlert)
 
 ## Table of Contents
 1. [Introduction](#introduction)
